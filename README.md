@@ -15,45 +15,65 @@ customer satisfaction.
 
 ## Skills Showcased
 
-This project demonstrates a full range of Power BI and analytics skills,
-including:
+This project demonstrates a full range of **data engineering, analytics,
+and visualization** skills, including:
 
 🔧 **Power BI Development**\
-- Creating interactive dashboards with slicers, drill-throughs, and
-filters\
-- Designing consistent layouts and clear navigation between report
-pages\
-- Publishing and sharing reports through Power BI Service
+- Interactive dashboards with slicers, drill-throughs, and filters\
+- Consistent layouts and clear navigation between pages\
+- Publishing and sharing via Power BI Service
 
 🧮 **Data Modeling & DAX**\
-- Creating measures for KPIs like *Total Revenue, Average Rating, and
-Monthly Orders*\
-- Implementing time intelligence (order trends by month, cancellations,
-review patterns)\
-- Managing relationships across customers, restaurants, and orders
-tables
+- KPIs: *Total Revenue, Avg Rating, Monthly Orders*\
+- Time intelligence functions (monthly orders, cancellations, reviews)\
+- Relationships between customers, restaurants, orders, and reviews
 
 🧹 **Data Cleaning & Transformation**\
-- Using Power Query for handling missing values, text cleaning, and date
-formatting\
-- Standardizing data for cuisine types, payment methods, and delivery
-statuses\
-- Normalizing customer and restaurant details
+- Power Query for handling missing values and formatting\
+- Standardization of cuisine, payment methods, and delivery statuses\
+- Normalization of customer and restaurant attributes
 
 📊 **Data Visualization**\
-- KPI cards (Total Customers, Revenue, Orders, Restaurants, Drivers,
-etc.)\
-- Bar & column charts (e.g., Orders by Cuisine, Top Restaurants by
-Rating)\
-- Line charts (Monthly Order Trends, Cancellations, Review Ratings)\
-- Pie/Donut charts (Payment Methods, Delivery Status, Vehicle Types)\
-- Drill-through reports for deeper restaurant & cuisine insights
+- KPI cards (Orders, Revenue, Avg Rating, Customers, Restaurants,
+Drivers)\
+- Charts: bar, line, pie, maps for orders, revenue, payments, and
+vehicles\
+- Drill-through analysis for cuisines and restaurants
 
 🔎 **Business & Market Analysis**\
-- Understanding customer preferences by cuisine type and payment method\
-- Identifying top-performing restaurants by revenue and ratings\
-- Tracking delivery performance (on-time, failed, assigned, cancelled)\
-- Analyzing seasonal order and review trends
+- Customer preferences by cuisine type and payment method\
+- Restaurant performance (revenue & ratings)\
+- Delivery performance by vehicle type and status\
+- Seasonal order and review patterns
+
+------------------------------------------------------------------------
+
+## Database Design & Data Pipeline
+
+This project goes beyond dashboards, including **end-to-end data
+handling**:
+
+-   **Database (SQL Server)**
+    -   Normalized schema for **Customers, Restaurants, MenuItems,
+        Orders, OrderDetails, Reviews, and DeliveryDrivers**\
+    -   Relationships:
+        -   Customers → Orders (1:∞)\
+        -   Restaurants → Orders, MenuItems (1:∞)\
+        -   Orders → Reviews, OrderDetails, DeliveryAssignments (1:1 or
+            1:∞)\
+        -   Drivers → DeliveryAssignments (1:∞)
+-   **Synthetic Data Generation (Python + Faker)**
+    -   Populated tables with realistic fake data (names, phones,
+        cuisine types, menu prices, orders, ratings).
+-   **Exploratory Data Analysis (pandas)**
+    -   Univariate (payment distributions, cuisine preferences)\
+    -   Bivariate (payment vs cancellation, cuisine vs rating)\
+    -   Multivariate (time × cuisine × ratings, price × payment ×
+        status)
+-   **Visualization Layer**
+    -   **Power BI:** Interactive dashboard with KPIs, monthly trends,
+        and drill-throughs\
+    -   **Excel:** Pivot tables, charts, and slicers for ad hoc analysis
 
 ------------------------------------------------------------------------
 
@@ -63,31 +83,37 @@ Rating)\
 
 ![Dashboard Screenshot](page_2_1.png)
 
-Provides a **high-level summary** of the online food delivery market:\
-- Total customers, restaurants, orders, drivers, and revenue\
-- Distribution of gender, payment methods, vehicle types\
+**High-level summary** of the food delivery market:\
+- Totals: 1,115 orders, 170 customers, 45 restaurants, 25 drivers, 1,245
+reviews, 100 menu items\
+- Total Revenue ≈ 46.63K; Avg Rating = 3.19\
 - Monthly order & cancellation trends\
-- Cuisine popularity and average ratings
+- Payment & vehicle type distributions\
+- Cuisine popularity & top performers
 
 ------------------------------------------------------------------------
 
 ## 📈 Insights You Can Gain
 
 -   Which cuisines are most popular and highly rated?\
--   Which restaurants generate the most revenue or best customer
-    satisfaction?\
--   What are the top payment methods and delivery vehicle preferences?\
--   How do monthly order volumes and cancellations fluctuate over time?\
--   How do customer reviews trend across different restaurants and
-    cuisines?
+-   Which restaurants drive the most revenue?\
+-   What delivery vehicle types optimize speed and cost?\
+-   How do payments split across cash, wallet, and cards?\
+-   Where are operational issues (cancellations, failed deliveries) most
+    common?
 
 ------------------------------------------------------------------------
 
 ## Conclusion
 
-This dashboard shows how **Power BI** can transform raw online food
-delivery data into **actionable business intelligence**. It enables
-managers and analysts to explore trends, monitor performance, and
-identify opportunities for improvement --- ultimately supporting smarter
-decisions in customer experience, restaurant operations, and delivery
-efficiency.
+This project demonstrates the **full lifecycle of data analytics**:\
+1. **SQL schema design** for structured data\
+2. **Synthetic data generation** with Python\
+3. **Cleaning & EDA** with pandas\
+4. **Visualization** in Power BI & Excel
+
+The platform is growing in orders and revenue, but high cancellations
+(\~26%) and average ratings (3.19) highlight opportunities for
+improvement. Focusing on **delivery reliability, restaurant coaching,
+digital payments, and scooters for urban areas** can improve
+satisfaction and long-term scalability.
