@@ -1,4 +1,4 @@
-# 🍔 Online Food Delivery Dashboard w/ Power BI
+# 🍔 Online Food Delivery Analysis
 
 ## Introduction
 
