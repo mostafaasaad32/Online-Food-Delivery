@@ -19,31 +19,31 @@ This project demonstrates a full range of **data engineering, analytics,
 and visualization** skills, including:
 
 🔧 **Power BI Development**\
-- Interactive dashboards with slicers, drill-throughs, and filters\
-- Consistent layouts and clear navigation between pages\
+- Interactive dashboards with slicers, drill-throughs, and filters
+- Consistent layouts and clear navigation between pages
 - Publishing and sharing via Power BI Service
 
 🧮 **Data Modeling & DAX**\
-- KPIs: *Total Revenue, Avg Rating, Monthly Orders*\
-- Time intelligence functions (monthly orders, cancellations, reviews)\
+- KPIs: *Total Revenue, Avg Rating, Monthly Orders*
+- Time intelligence functions (monthly orders, cancellations, reviews)
 - Relationships between customers, restaurants, orders, and reviews
 
-🧹 **Data Cleaning & Transformation**\
-- Power Query for handling missing values and formatting\
-- Standardization of cuisine, payment methods, and delivery statuses\
+🧹 **Data Cleaning & Transformation**
+- Power Query for handling missing values and formatting
+- Standardization of cuisine, payment methods, and delivery statuses
 - Normalization of customer and restaurant attributes
 
-📊 **Data Visualization**\
+📊 **Data Visualization**
 - KPI cards (Orders, Revenue, Avg Rating, Customers, Restaurants,
-Drivers)\
+Drivers)
 - Charts: bar, line, pie, maps for orders, revenue, payments, and
-vehicles\
+vehicles
 - Drill-through analysis for cuisines and restaurants
 
-🔎 **Business & Market Analysis**\
-- Customer preferences by cuisine type and payment method\
-- Restaurant performance (revenue & ratings)\
-- Delivery performance by vehicle type and status\
+🔎 **Business & Market Analysis**
+- Customer preferences by cuisine type and payment method
+- Restaurant performance (revenue & ratings)
+- Delivery performance by vehicle type and status
 - Seasonal order and review patterns
 
 ------------------------------------------------------------------------
@@ -55,24 +55,24 @@ handling**:
 
 -   **Database (SQL Server)**
     -   Normalized schema for **Customers, Restaurants, MenuItems,
-        Orders, OrderDetails, Reviews, and DeliveryDrivers**\
+        Orders, OrderDetails, Reviews, and DeliveryDrivers**
     -   Relationships:
-        -   Customers → Orders (1:∞)\
-        -   Restaurants → Orders, MenuItems (1:∞)\
+        -   Customers → Orders (1:∞)
+        -   Restaurants → Orders, MenuItems (1:∞)
         -   Orders → Reviews, OrderDetails, DeliveryAssignments (1:1 or
-            1:∞)\
+            1:∞)
         -   Drivers → DeliveryAssignments (1:∞)
 -   **Synthetic Data Generation (Python + Faker)**
     -   Populated tables with realistic fake data (names, phones,
         cuisine types, menu prices, orders, ratings).
 -   **Exploratory Data Analysis (pandas)**
-    -   Univariate (payment distributions, cuisine preferences)\
-    -   Bivariate (payment vs cancellation, cuisine vs rating)\
+    -   Univariate (payment distributions, cuisine preferences)
+    -   Bivariate (payment vs cancellation, cuisine vs rating)
     -   Multivariate (time × cuisine × ratings, price × payment ×
         status)
 -   **Visualization Layer**
     -   **Power BI:** Interactive dashboard with KPIs, monthly trends,
-        and drill-throughs\
+        and drill-throughs
     -   **Excel:** Pivot tables, charts, and slicers for ad hoc analysis
 
 ------------------------------------------------------------------------
@@ -84,22 +84,22 @@ handling**:
 ![Dashboard Screenshot](dash1.png)
 ![Dashboard Screenshot](dash2.png)
 ![Dashboard Screenshot](dash3.png)
-**High-level summary** of the food delivery market:\
+**High-level summary** of the food delivery market:
 - Totals: 1,115 orders, 170 customers, 45 restaurants, 25 drivers, 1,245
-reviews, 100 menu items\
-- Total Revenue ≈ 46.63K; Avg Rating = 3.19\
-- Monthly order & cancellation trends\
-- Payment & vehicle type distributions\
+reviews, 100 menu items
+- Total Revenue ≈ 46.63K; Avg Rating = 3.19
+- Monthly order & cancellation trends
+- Payment & vehicle type distributions
 - Cuisine popularity & top performers
 
 ------------------------------------------------------------------------
 
 ## 📈 Insights You Can Gain
 
--   Which cuisines are most popular and highly rated?\
--   Which restaurants drive the most revenue?\
--   What delivery vehicle types optimize speed and cost?\
--   How do payments split across cash, wallet, and cards?\
+-   Which cuisines are most popular and highly rated?
+-   Which restaurants drive the most revenue?
+-   What delivery vehicle types optimize speed and cost?
+-   How do payments split across cash, wallet, and cards?
 -   Where are operational issues (cancellations, failed deliveries) most
     common?
 
@@ -107,10 +107,10 @@ reviews, 100 menu items\
 
 ## Conclusion
 
-This project demonstrates the **full lifecycle of data analytics**:\
-1. **SQL schema design** for structured data\
-2. **Synthetic data generation** with Python\
-3. **Cleaning & EDA** with pandas\
+This project demonstrates the **full lifecycle of data analytics**:
+1. **SQL schema design** for structured data
+2. **Synthetic data generation** with Python
+3. **Cleaning & EDA** with pandas
 4. **Visualization** in Power BI & Excel
 
 The platform is growing in orders and revenue, but high cancellations
