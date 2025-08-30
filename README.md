@@ -81,8 +81,9 @@ handling**:
 
 ### 📊 Page 1: Market Overview
 
-![Dashboard Screenshot](page_2_1.png)
-
+![Dashboard Screenshot](dash1.png)
+![Dashboard Screenshot](dash2.png)
+![Dashboard Screenshot](dash3.png)
 **High-level summary** of the food delivery market:\
 - Totals: 1,115 orders, 170 customers, 45 restaurants, 25 drivers, 1,245
 reviews, 100 menu items\
